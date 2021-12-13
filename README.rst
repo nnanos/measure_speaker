@@ -79,6 +79,12 @@ You can also install the in-development version with::
     pip install https://github.com/nnanos/measure_speaker/archive/master.zip
 
 
+Usage
+============
+1)Record the sweep.wav with a recording software i.e Audacity
+2) 
+
+
 Documentation
 =============
 
