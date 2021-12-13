@@ -26,10 +26,7 @@ setup(
     version='0.0.1',
     license='MIT',
     description='An app for meas',
-    long_description='%s\n%s' % (
-        re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
-        re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
-    ),
+    long_description="An application that measures the Impulse\Frequency Responce of your speakers with Python (like REW) . It was a an attempt to confirm what the REW is doing under the scenes ",
     author='Nanos Nikolaos',
     author_email='nnanos@ceid.upatras.gr',
     url='https://github.com/nnanos/measure_speaker',
@@ -71,14 +68,12 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-<<<<<<< HEAD
-=======
+        # eg: 'aspectlib==1.1.1', 'six>=1.7',
         "numpy",
         "librosa",
         "matplotlib",
         "argparse",
-        "scipy"
->>>>>>> 
+        "scipy",
     ],
     extras_require={
         # eg:

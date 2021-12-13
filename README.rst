@@ -59,7 +59,7 @@ Overview
 
 .. end-badges
 
-An app for meas
+
 
 * Free software: MIT license
 
