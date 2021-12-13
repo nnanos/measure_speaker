@@ -71,7 +71,14 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
+<<<<<<< HEAD
+=======
+        "numpy",
+        "librosa",
+        "matplotlib",
+        "argparse",
+        "scipy"
+>>>>>>> 
     ],
     extras_require={
         # eg:
