@@ -26,6 +26,7 @@ setup(
     version='0.0.1',
     license='MIT',
     description='An app for meas',
+    long_description_content_type="text/markdown",
     long_description="An application that measures the Impulse\Frequency Responce of your speakers with Python (like REW) . It was a an attempt to confirm what the REW is doing under the scenes ",
     author='Nanos Nikolaos',
     author_email='nnanos@ceid.upatras.gr',
