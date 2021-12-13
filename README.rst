@@ -2,6 +2,10 @@
 Overview
 ========
 
+An application that measures the Impulse\Frequency Responce 
+of your speakers with Python (like REW) . 
+It was a an attempt to confirm what the REW is doing under the scenes .
+
 .. start-badges
 
 .. list-table::
