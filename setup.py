@@ -22,11 +22,11 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='measure-speaker',
+    name='measure_spkr',
     version='0.0.1',
     license='MIT',
-    description='An app for meas',
-    long_description_content_type="text/markdown",
+    description='An app for measuring impulse-frequency response of speaker',
+    #long_description_content_type="text/markdown",
     long_description="An application that measures the Impulse\Frequency Responce of your speakers with Python (like REW) . It was a an attempt to confirm what the REW is doing under the scenes ",
     author='Nanos Nikolaos',
     author_email='nnanos@ceid.upatras.gr',
@@ -67,7 +67,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.8.10',
     install_requires=[
         # eg: 'aspectlib==1.1.1', 'six>=1.7',
         "numpy",
@@ -75,6 +75,8 @@ setup(
         "matplotlib",
         "argparse",
         "scipy",
+        "PySimpleGUI",
+        "sounddevice"
     ],
     extras_require={
         # eg:
