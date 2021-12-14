@@ -7,27 +7,30 @@ import matplotlib
 from scipy import signal
 
 
-parser = argparse.ArgumentParser()
+# parser = argparse.ArgumentParser()
 
-parser.add_argument('--sweep_rec', type=str,
-                        help='provide the path to the recorded wav file of the response of the speaker to the sweep signal (output)')
+# parser.add_argument('--sweep_rec', type=str,
+#                         help='provide the path to the recorded wav file of the response of the speaker to the sweep signal (output)')
 
-parser.add_argument('--sweep', type=str,
-                        help='provide the path to the sweep wav file that your speaker will play (input) ')       
+# parser.add_argument('--sweep', type=str,
+#                         help='provide the path to the sweep wav file that your speaker will play (input) ')       
 
-parser.add_argument('--win_dur', type=float, default=0.01,
-                        help='provide the window duration in time (seconds) in order to window the impulse response (avoding distortion related to early reflactions) ')                                        
-
-
+# parser.add_argument('--win_dur', type=float, default=0.01,
+#                         help='provide the window duration in time (seconds) in order to window the impulse response (avoding distortion related to early reflactions) ')                                        
 
 
-args, _ = parser.parse_known_args()
 
+
+# args, _ = parser.parse_known_args()
+
+sweep = str( input( 'provide the path to the sweep wav file that your speaker will play (input) ' ) )
+sweep_rec = str(input("provide the path to the recorded wav file of the response of the speaker to the sweep signal (output)"))
+win_dur = str(input( 'provide the window duration in time (seconds) in order to window the impulse response (avoding distortion related to early reflactions) ' ) )
 
 #load the sweep sine stimuli
-x,s=librosa.load(args.sweep, sr=44100)
+x,s=librosa.load(sweep, sr=44100)
 #load the recorded response of the filter(speaker) to the swept sine stimuli
-x_rec,s=librosa.load(args.sweep_rec, sr=44100)
+x_rec,s=librosa.load(sweep_rec, sr=44100)
 
 
 #get inverse filter for deconv:
@@ -43,7 +46,7 @@ h_est = np.convolve(x_inv,x_rec)
 time2ind = lambda time,s : time*s   
 max_ind= np.argmax(h_est)
 start = max_ind
-win_dur = int(time2ind(args.win_dur,s))
+win_dur = int(time2ind(win_dur,s))
 end = start + win_dur
 z = np.zeros(len(h_est))
 window = np.roll(signal.tukey(win_dur*2) , win_dur )[:win_dur]
