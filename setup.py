@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
     name='measure_spkr',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
     description='An app for measuring impulse-frequency response of speaker',
     #long_description_content_type="text/markdown",

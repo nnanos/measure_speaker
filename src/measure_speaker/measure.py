@@ -22,6 +22,8 @@ def exec_app():
     layout = [[sg.Button("measure!")]]
     window = sg.Window("measure speaker app",layout,margins=(100,50))
 
+    
+
     while True:
 
         event,values = window.read()

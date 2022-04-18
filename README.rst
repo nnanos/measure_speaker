@@ -14,18 +14,20 @@ Installation
 
 ::
 
-    pip install measure-speaker
+    pip install measure-spkr
 
-You can also install the in-development version with::
 
-    pip install https://github.com/nnanos/measure_speaker/archive/master.zip
 
 
 Usage
 ============
-1)Record the sweep.wav with a recording software i.e Audacity
-2)Open python interpreter : python
-3)Exec script:  
+
+Execute the following commands in a python interpreter:
+
+::
+
+    from measure_speaker.measure import exec_app
+    exec_app()
 
 
 Documentation
