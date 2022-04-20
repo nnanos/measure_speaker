@@ -30,6 +30,7 @@ Execute the following commands in a python interpreter:
     exec_app()
 
 
-Documentation
+TO DO
 =============
-
+Add functionality to the app in order for the user
+to change the Impulse Responce window for avoiding early reflection distortion
